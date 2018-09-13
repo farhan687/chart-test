@@ -33,12 +33,22 @@ const generateData = (count=100) => {
   return data;
 }
 
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       // count: 100,
-      finalCount: 1000,
+      finalCount: getParameterByName('count') ? parseInt(getParameterByName('count')) : 1000,
     };
     this.handleUpdate = this.handleUpdate.bind(this);
     this.updateInput = this.updateInput.bind(this);
