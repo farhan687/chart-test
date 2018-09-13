@@ -1,0 +1,11 @@
+.chart-container {
+    position: relative;
+}
+.chart-brush {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.chart-brush .recharts-cartesian-axis-ticks {
+    display: none
+}
