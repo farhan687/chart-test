@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "http://farhan687.github.io/chart-test",
   "dependencies": {
-    "moment": "^2.22.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-scripts": "1.1.5",
-    "recharts": "^1.2.0"
+    "recharts": "^1.5.0"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
